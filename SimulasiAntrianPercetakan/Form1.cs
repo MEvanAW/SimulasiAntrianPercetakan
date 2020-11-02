@@ -16,5 +16,15 @@ namespace SimulasiAntrianPercetakan
         {
             InitializeComponent();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
