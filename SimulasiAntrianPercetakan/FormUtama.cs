@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SimulasiAntrianPercetakan
 {
-    public partial class Form1 : Form
+    public partial class FormUtama : Form
     {
-        public Form1()
+        public FormUtama()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace SimulasiAntrianPercetakan
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
