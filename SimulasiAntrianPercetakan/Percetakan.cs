@@ -62,8 +62,9 @@ namespace SimulasiAntrianPercetakan
             {
                 var pointer = Antrian.First;
                 while (pointer.Next != null && pointer.Value.isEkspres && !pesanan.isEkspres)
-                    while (pointer.Next != null && pointer.Value.timeStamp < pesanan.timeStamp && pointer.Value.isEkspres == pesanan.isEkspres)
-                        pointer = pointer.Next;
+                    pointer = pointer.Next;
+                while (pointer.Next != null && pointer.Value.timeStamp < pesanan.timeStamp && pointer.Value.isEkspres == pesanan.isEkspres)
+                    pointer = pointer.Next;
                 if (pointer.Value.timeStamp <= pesanan.timeStamp)
                     Antrian.AddAfter(pointer, pesanan);
                 else
