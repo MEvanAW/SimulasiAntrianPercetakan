@@ -11,6 +11,7 @@ namespace SimulasiAntrianPercetakan
         // Atribut nota pesanan
         public string idPelanggan;
         public string namaBerkas;
-        public int unixTimestamp = (int) DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+        public int prioritas; // 0 = biasa, 1 = ekspres
+        public int unixTimestamp = (int) DateTime.UtcNow.Subtract(new DateTime(2020, 11, 22)).TotalSeconds;
     }
 }

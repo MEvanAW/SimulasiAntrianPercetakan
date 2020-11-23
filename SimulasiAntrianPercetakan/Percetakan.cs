@@ -9,11 +9,9 @@ namespace SimulasiAntrianPercetakan
     class Percetakan
     {
         // Atribut percetakan
-        public int antrian = 0;
-        private int jumlahPrinter = 0;
-        private int jumlahPrinterOn = 0;
-        public int jumlahPesananEkspress = 0;
-        public int jumlahPesananBiasa = 0;
+        public LinkedList<NotaPesanan> antrian { get; } = new LinkedList<NotaPesanan>();
+        private int jumlahPrinter = 1;
+        private int jumlahPrinterOn = 1;
 
         // Behaviour percetakan
         public void terimaPesanan() { }
@@ -35,5 +33,32 @@ namespace SimulasiAntrianPercetakan
         }
         public void lihatPesananEkspress() { }
         public void lihatPesananBiasa() { }
+        public void enqueue(NotaPesanan pesanan)
+        {
+            var nodePesanan = new LinkedListNode<NotaPesanan>(pesanan);
+            if (antrian.First == null)
+                antrian.AddFirst(nodePesanan);
+            else
+            {
+                var pointer = antrian.First;
+                while (pointer.Next != null & pointer.Value.prioritas < pesanan.prioritas)
+                    pointer = pointer.Next;
+                if (pointer.Value.prioritas <= pesanan.prioritas)
+                    antrian.AddAfter(pointer, pesanan);
+                else
+                    antrian.AddBefore(pointer, pesanan);
+            }
+
+        }
+        public NotaPesanan dequeue()
+        {
+            if (antrian.Any())
+            {
+                var pesananUntukDihapus = antrian.First.Value;
+                antrian.RemoveFirst();
+                return pesananUntukDihapus;
+            }
+            return default;
+        }
     }
 }
