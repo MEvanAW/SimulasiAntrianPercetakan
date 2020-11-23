@@ -31,6 +31,12 @@ namespace SimulasiAntrianPercetakan
                 MessageBox.Show("Mohon isi nama berkas.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            // START DEBUGGING
+            /* MessageBox.Show("idPelanggan: " + idPelanggan.ToString() + "\n" +
+                "namaBerkas: " + namaBerkasTextBox.Text + "\n" +
+                "isEkspres: " + (ekspresRadioButton.Checked).ToString(),
+                "DEBUGGING", MessageBoxButtons.OK, MessageBoxIcon.Information); */
+            // END DEBUGGING
             FormUtama.pelanggan[idPelanggan].Pesan(namaBerkasTextBox.Text, ekspresRadioButton.Checked);
             Close();
         }
