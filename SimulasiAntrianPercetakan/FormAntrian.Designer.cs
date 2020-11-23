@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sedangDicetakGroupBox = new System.Windows.Forms.GroupBox();
+            this.sedangDicetakLabel = new System.Windows.Forms.Label();
+            this.antrianEkspresGroupBox = new System.Windows.Forms.GroupBox();
+            this.antrianEkspresLabel = new System.Windows.Forms.Label();
+            this.antrianBiasaGroupBox = new System.Windows.Forms.GroupBox();
+            this.antrianBiasaLabel = new System.Windows.Forms.Label();
             this.mulaiMencetakButton = new System.Windows.Forms.Button();
             this.berhentiMencetakButton = new System.Windows.Forms.Button();
-            this.antrianBiasaGroupBox = new System.Windows.Forms.GroupBox();
-            this.antrianEkspresGroupBox = new System.Windows.Forms.GroupBox();
-            this.sedangDicetakGroupBox = new System.Windows.Forms.GroupBox();
-            this.antrianBiasaLabel = new System.Windows.Forms.Label();
-            this.antrianEkspresLabel = new System.Windows.Forms.Label();
-            this.sedangDicetakLabel = new System.Windows.Forms.Label();
+            this.cetakProgressBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
-            this.antrianBiasaGroupBox.SuspendLayout();
-            this.antrianEkspresGroupBox.SuspendLayout();
             this.sedangDicetakGroupBox.SuspendLayout();
+            this.antrianEkspresGroupBox.SuspendLayout();
+            this.antrianBiasaGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +54,76 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 385);
             this.panel1.TabIndex = 0;
+            // 
+            // sedangDicetakGroupBox
+            // 
+            this.sedangDicetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.sedangDicetakGroupBox.Controls.Add(this.cetakProgressBar);
+            this.sedangDicetakGroupBox.Controls.Add(this.sedangDicetakLabel);
+            this.sedangDicetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.sedangDicetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.sedangDicetakGroupBox.Location = new System.Drawing.Point(652, 14);
+            this.sedangDicetakGroupBox.Name = "sedangDicetakGroupBox";
+            this.sedangDicetakGroupBox.Size = new System.Drawing.Size(307, 354);
+            this.sedangDicetakGroupBox.TabIndex = 14;
+            this.sedangDicetakGroupBox.TabStop = false;
+            this.sedangDicetakGroupBox.Text = "Sedang Dicetak";
+            // 
+            // sedangDicetakLabel
+            // 
+            this.sedangDicetakLabel.AutoSize = true;
+            this.sedangDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.sedangDicetakLabel.Location = new System.Drawing.Point(6, 47);
+            this.sedangDicetakLabel.Name = "sedangDicetakLabel";
+            this.sedangDicetakLabel.Size = new System.Drawing.Size(192, 27);
+            this.sedangDicetakLabel.TabIndex = 2;
+            this.sedangDicetakLabel.Text = "sedangDicetakLabel";
+            // 
+            // antrianEkspresGroupBox
+            // 
+            this.antrianEkspresGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.antrianEkspresGroupBox.Controls.Add(this.antrianEkspresLabel);
+            this.antrianEkspresGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.antrianEkspresGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.antrianEkspresGroupBox.Location = new System.Drawing.Point(332, 14);
+            this.antrianEkspresGroupBox.Name = "antrianEkspresGroupBox";
+            this.antrianEkspresGroupBox.Size = new System.Drawing.Size(307, 354);
+            this.antrianEkspresGroupBox.TabIndex = 13;
+            this.antrianEkspresGroupBox.TabStop = false;
+            this.antrianEkspresGroupBox.Text = "Antrian Ekspres";
+            // 
+            // antrianEkspresLabel
+            // 
+            this.antrianEkspresLabel.AutoSize = true;
+            this.antrianEkspresLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.antrianEkspresLabel.Location = new System.Drawing.Point(6, 47);
+            this.antrianEkspresLabel.Name = "antrianEkspresLabel";
+            this.antrianEkspresLabel.Size = new System.Drawing.Size(196, 27);
+            this.antrianEkspresLabel.TabIndex = 1;
+            this.antrianEkspresLabel.Text = "antrianEkspresLabel";
+            // 
+            // antrianBiasaGroupBox
+            // 
+            this.antrianBiasaGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.antrianBiasaGroupBox.Controls.Add(this.antrianBiasaLabel);
+            this.antrianBiasaGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.antrianBiasaGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.antrianBiasaGroupBox.Location = new System.Drawing.Point(12, 14);
+            this.antrianBiasaGroupBox.Name = "antrianBiasaGroupBox";
+            this.antrianBiasaGroupBox.Size = new System.Drawing.Size(307, 354);
+            this.antrianBiasaGroupBox.TabIndex = 12;
+            this.antrianBiasaGroupBox.TabStop = false;
+            this.antrianBiasaGroupBox.Text = "Antrian Biasa";
+            // 
+            // antrianBiasaLabel
+            // 
+            this.antrianBiasaLabel.AutoSize = true;
+            this.antrianBiasaLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.antrianBiasaLabel.Location = new System.Drawing.Point(6, 47);
+            this.antrianBiasaLabel.Name = "antrianBiasaLabel";
+            this.antrianBiasaLabel.Size = new System.Drawing.Size(174, 27);
+            this.antrianBiasaLabel.TabIndex = 0;
+            this.antrianBiasaLabel.Text = "antrianBiasaLabel";
             // 
             // mulaiMencetakButton
             // 
@@ -69,6 +140,7 @@
             this.mulaiMencetakButton.TabIndex = 6;
             this.mulaiMencetakButton.Text = "Mulai Mencetak";
             this.mulaiMencetakButton.UseVisualStyleBackColor = false;
+            this.mulaiMencetakButton.Click += new System.EventHandler(this.mulaiMencetakButton_Click);
             // 
             // berhentiMencetakButton
             // 
@@ -85,75 +157,14 @@
             this.berhentiMencetakButton.TabIndex = 7;
             this.berhentiMencetakButton.Text = "Berhenti Mencetak";
             this.berhentiMencetakButton.UseVisualStyleBackColor = false;
+            this.berhentiMencetakButton.Click += new System.EventHandler(this.berhentiMencetakButton_Click);
             // 
-            // antrianBiasaGroupBox
+            // cetakProgressBar
             // 
-            this.antrianBiasaGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.antrianBiasaGroupBox.Controls.Add(this.antrianBiasaLabel);
-            this.antrianBiasaGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
-            this.antrianBiasaGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.antrianBiasaGroupBox.Location = new System.Drawing.Point(12, 14);
-            this.antrianBiasaGroupBox.Name = "antrianBiasaGroupBox";
-            this.antrianBiasaGroupBox.Size = new System.Drawing.Size(307, 354);
-            this.antrianBiasaGroupBox.TabIndex = 12;
-            this.antrianBiasaGroupBox.TabStop = false;
-            this.antrianBiasaGroupBox.Text = "Antrian Biasa";
-            // 
-            // antrianEkspresGroupBox
-            // 
-            this.antrianEkspresGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.antrianEkspresGroupBox.Controls.Add(this.antrianEkspresLabel);
-            this.antrianEkspresGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
-            this.antrianEkspresGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.antrianEkspresGroupBox.Location = new System.Drawing.Point(332, 14);
-            this.antrianEkspresGroupBox.Name = "antrianEkspresGroupBox";
-            this.antrianEkspresGroupBox.Size = new System.Drawing.Size(307, 354);
-            this.antrianEkspresGroupBox.TabIndex = 13;
-            this.antrianEkspresGroupBox.TabStop = false;
-            this.antrianEkspresGroupBox.Text = "Antrian Ekspres";
-            // 
-            // sedangDicetakGroupBox
-            // 
-            this.sedangDicetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.sedangDicetakGroupBox.Controls.Add(this.sedangDicetakLabel);
-            this.sedangDicetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
-            this.sedangDicetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.sedangDicetakGroupBox.Location = new System.Drawing.Point(652, 14);
-            this.sedangDicetakGroupBox.Name = "sedangDicetakGroupBox";
-            this.sedangDicetakGroupBox.Size = new System.Drawing.Size(307, 354);
-            this.sedangDicetakGroupBox.TabIndex = 14;
-            this.sedangDicetakGroupBox.TabStop = false;
-            this.sedangDicetakGroupBox.Text = "Sedang Dicetak";
-            // 
-            // antrianBiasaLabel
-            // 
-            this.antrianBiasaLabel.AutoSize = true;
-            this.antrianBiasaLabel.Font = new System.Drawing.Font("Calibri", 11F);
-            this.antrianBiasaLabel.Location = new System.Drawing.Point(6, 47);
-            this.antrianBiasaLabel.Name = "antrianBiasaLabel";
-            this.antrianBiasaLabel.Size = new System.Drawing.Size(174, 27);
-            this.antrianBiasaLabel.TabIndex = 0;
-            this.antrianBiasaLabel.Text = "antrianBiasaLabel";
-            // 
-            // antrianEkspresLabel
-            // 
-            this.antrianEkspresLabel.AutoSize = true;
-            this.antrianEkspresLabel.Font = new System.Drawing.Font("Calibri", 11F);
-            this.antrianEkspresLabel.Location = new System.Drawing.Point(6, 47);
-            this.antrianEkspresLabel.Name = "antrianEkspresLabel";
-            this.antrianEkspresLabel.Size = new System.Drawing.Size(196, 27);
-            this.antrianEkspresLabel.TabIndex = 1;
-            this.antrianEkspresLabel.Text = "antrianEkspresLabel";
-            // 
-            // sedangDicetakLabel
-            // 
-            this.sedangDicetakLabel.AutoSize = true;
-            this.sedangDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
-            this.sedangDicetakLabel.Location = new System.Drawing.Point(6, 47);
-            this.sedangDicetakLabel.Name = "sedangDicetakLabel";
-            this.sedangDicetakLabel.Size = new System.Drawing.Size(192, 27);
-            this.sedangDicetakLabel.TabIndex = 2;
-            this.sedangDicetakLabel.Text = "sedangDicetakLabel";
+            this.cetakProgressBar.Location = new System.Drawing.Point(11, 86);
+            this.cetakProgressBar.Name = "cetakProgressBar";
+            this.cetakProgressBar.Size = new System.Drawing.Size(290, 23);
+            this.cetakProgressBar.TabIndex = 3;
             // 
             // FormAntrian
             // 
@@ -167,12 +178,12 @@
             this.Name = "FormAntrian";
             this.Text = "Form Antrian";
             this.panel1.ResumeLayout(false);
-            this.antrianBiasaGroupBox.ResumeLayout(false);
-            this.antrianBiasaGroupBox.PerformLayout();
-            this.antrianEkspresGroupBox.ResumeLayout(false);
-            this.antrianEkspresGroupBox.PerformLayout();
             this.sedangDicetakGroupBox.ResumeLayout(false);
             this.sedangDicetakGroupBox.PerformLayout();
+            this.antrianEkspresGroupBox.ResumeLayout(false);
+            this.antrianEkspresGroupBox.PerformLayout();
+            this.antrianBiasaGroupBox.ResumeLayout(false);
+            this.antrianBiasaGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Label sedangDicetakLabel;
         private System.Windows.Forms.Label antrianEkspresLabel;
         private System.Windows.Forms.Label antrianBiasaLabel;
+        private System.Windows.Forms.ProgressBar cetakProgressBar;
     }
 }

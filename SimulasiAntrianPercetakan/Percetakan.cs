@@ -50,22 +50,18 @@ namespace SimulasiAntrianPercetakan
             else
                 _antrianEkspres.Enqueue(pesanan);
         }
-        public static bool Cetak()
+        public static void Cetak()
         {
             if (_antrianEkspres.Any())
             {
                 BerkasTercetak.Add(_antrianEkspres.Peek());
                 _antrianEkspres.Dequeue();
-                return true;
             }
             else if (_antrianBiasa.Any())
             {
                 BerkasTercetak.Add(_antrianBiasa.Peek());
                 _antrianBiasa.Dequeue();
-                return true;
             }
-            else
-                return false;
         }
     }
 }
