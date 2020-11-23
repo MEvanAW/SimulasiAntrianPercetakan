@@ -9,7 +9,7 @@ namespace SimulasiAntrianPercetakan
     class Percetakan
     {
         // Atribut percetakan
-        public LinkedList<NotaPesanan> antrian { get; } = new LinkedList<NotaPesanan>();
+        public LinkedList<Pesanan> antrian { get; } = new LinkedList<Pesanan>();
         private int jumlahPrinter = 1;
         private int jumlahPrinterOn = 1;
 
@@ -33,9 +33,9 @@ namespace SimulasiAntrianPercetakan
         }
         public void lihatPesananEkspress() { }
         public void lihatPesananBiasa() { }
-        public void enqueue(NotaPesanan pesanan)
+        public void enqueue(Pesanan pesanan)
         {
-            var nodePesanan = new LinkedListNode<NotaPesanan>(pesanan);
+            var nodePesanan = new LinkedListNode<Pesanan>(pesanan);
             if (antrian.First == null)
                 antrian.AddFirst(nodePesanan);
             else
@@ -50,7 +50,7 @@ namespace SimulasiAntrianPercetakan
             }
 
         }
-        public NotaPesanan dequeue()
+        public Pesanan dequeue()
         {
             if (antrian.Any())
             {

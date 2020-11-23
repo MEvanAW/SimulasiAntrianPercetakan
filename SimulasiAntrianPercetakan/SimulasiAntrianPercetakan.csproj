@@ -59,13 +59,19 @@
     <Compile Include="FormBerkasTercetak.Designer.cs">
       <DependentUpon>FormBerkasTercetak.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPesan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesan.Designer.cs">
+      <DependentUpon>FormPesan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUtama.Designer.cs">
       <DependentUpon>FormUtama.cs</DependentUpon>
     </Compile>
-    <Compile Include="NotaPesanan.cs" />
+    <Compile Include="Pesanan.cs" />
     <Compile Include="Pelanggan.cs" />
     <Compile Include="Percetakan.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBerkasTercetak.resx">
       <DependentUpon>FormBerkasTercetak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesan.resx">
+      <DependentUpon>FormPesan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

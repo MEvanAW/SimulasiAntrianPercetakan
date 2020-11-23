@@ -29,5 +29,30 @@ namespace SimulasiAntrianPercetakan
         {
             new FormBerkasTercetak().Show();
         }
+
+        private void pelanggan1PesanButton_Click(object sender, EventArgs e)
+        {
+            new FormPesan().Show();
+        }
+
+        private void pelanggan2PesanButton_Click(object sender, EventArgs e)
+        {
+            new FormPesan().Show();
+        }
+
+        private void pelanggan3PesanButton_Click(object sender, EventArgs e)
+        {
+            new FormPesan().Show();
+        }
+
+        private void pelanggan4PesanButton_Click(object sender, EventArgs e)
+        {
+            new FormPesan().Show();
+        }
+
+        private void pelanggan5PesanButton_Click(object sender, EventArgs e)
+        {
+            new FormPesan().Show();
+        }
     }
 }

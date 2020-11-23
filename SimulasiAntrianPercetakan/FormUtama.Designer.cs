@@ -130,6 +130,7 @@
             this.pelanggan1PesanButton.TabIndex = 2;
             this.pelanggan1PesanButton.Text = "Pesan";
             this.pelanggan1PesanButton.UseVisualStyleBackColor = false;
+            this.pelanggan1PesanButton.Click += new System.EventHandler(this.pelanggan1PesanButton_Click);
             // 
             // pictureBox1
             // 
@@ -203,6 +204,7 @@
             this.pelanggan4PesanButton.TabIndex = 5;
             this.pelanggan4PesanButton.Text = "Pesan";
             this.pelanggan4PesanButton.UseVisualStyleBackColor = false;
+            this.pelanggan4PesanButton.Click += new System.EventHandler(this.pelanggan4PesanButton_Click);
             // 
             // pictureBox2
             // 
@@ -260,6 +262,7 @@
             this.pelanggan3PesanButton.TabIndex = 5;
             this.pelanggan3PesanButton.Text = "Pesan";
             this.pelanggan3PesanButton.UseVisualStyleBackColor = false;
+            this.pelanggan3PesanButton.Click += new System.EventHandler(this.pelanggan3PesanButton_Click);
             // 
             // pictureBox3
             // 
@@ -317,6 +320,7 @@
             this.pelanggan2PesanButton.TabIndex = 5;
             this.pelanggan2PesanButton.Text = "Pesan";
             this.pelanggan2PesanButton.UseVisualStyleBackColor = false;
+            this.pelanggan2PesanButton.Click += new System.EventHandler(this.pelanggan2PesanButton_Click);
             // 
             // pictureBox4
             // 
@@ -375,6 +379,7 @@
             this.pelanggan5PesanButton.TabIndex = 5;
             this.pelanggan5PesanButton.Text = "Pesan";
             this.pelanggan5PesanButton.UseVisualStyleBackColor = false;
+            this.pelanggan5PesanButton.Click += new System.EventHandler(this.pelanggan5PesanButton_Click);
             // 
             // pictureBox5
             // 
