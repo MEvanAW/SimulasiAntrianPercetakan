@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SimulasiAntrianPercetakan
 {
-    public partial class FormUtama : Form
+    public partial class FormAntrian : Form
     {
-        public FormUtama()
+        public FormAntrian()
         {
             InitializeComponent();
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bukaAntrianButton_Click(object sender, EventArgs e)
-        {
-            new FormAntrian().Show();
         }
     }
 }

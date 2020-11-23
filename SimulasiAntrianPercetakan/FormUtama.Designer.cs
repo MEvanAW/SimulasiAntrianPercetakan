@@ -32,35 +32,35 @@
             this.gb_pelanggan1 = new System.Windows.Forms.GroupBox();
             this.pelanggan1AmbilPesananButton = new System.Windows.Forms.Button();
             this.pelanggan1PesanButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_exit = new System.Windows.Forms.Button();
             this.gb_pelanggan4 = new System.Windows.Forms.GroupBox();
             this.pelanggan4AmbilPesananButton = new System.Windows.Forms.Button();
             this.pelanggan4PesanButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gb_pelanggan3 = new System.Windows.Forms.GroupBox();
             this.pelanggan3AmbilPesananButton = new System.Windows.Forms.Button();
             this.pelanggan3PesanButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gb_peanggan2 = new System.Windows.Forms.GroupBox();
             this.pelanggan2AmbilPesananButton = new System.Windows.Forms.Button();
             this.pelanggan2PesanButton = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.gb_pelanggan5 = new System.Windows.Forms.GroupBox();
             this.pelanggan5AmbilPesananButton = new System.Windows.Forms.Button();
             this.pelanggan5PesanButton = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.berkasTercetakButton = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.bukaAntrianButton = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelForm = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.gb_pelanggan1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gb_pelanggan4.SuspendLayout();
@@ -88,9 +88,9 @@
             // gb_pelanggan1
             // 
             this.gb_pelanggan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gb_pelanggan1.Controls.Add(this.label2);
             this.gb_pelanggan1.Controls.Add(this.pelanggan1AmbilPesananButton);
             this.gb_pelanggan1.Controls.Add(this.pelanggan1PesanButton);
-            this.gb_pelanggan1.Controls.Add(this.textBox1);
             this.gb_pelanggan1.Controls.Add(this.pictureBox1);
             this.gb_pelanggan1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_pelanggan1.Location = new System.Drawing.Point(816, 75);
@@ -131,19 +131,6 @@
             this.pelanggan1PesanButton.Text = "Pesan";
             this.pelanggan1PesanButton.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox1.Location = new System.Drawing.Point(183, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 40);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Pelanggan 1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SimulasiAntrianPercetakan.Properties.Resources.businessman;
@@ -174,9 +161,9 @@
             // gb_pelanggan4
             // 
             this.gb_pelanggan4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gb_pelanggan4.Controls.Add(this.label5);
             this.gb_pelanggan4.Controls.Add(this.pelanggan4AmbilPesananButton);
             this.gb_pelanggan4.Controls.Add(this.pelanggan4PesanButton);
-            this.gb_pelanggan4.Controls.Add(this.textBox2);
             this.gb_pelanggan4.Controls.Add(this.pictureBox2);
             this.gb_pelanggan4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_pelanggan4.Location = new System.Drawing.Point(418, 535);
@@ -217,19 +204,6 @@
             this.pelanggan4PesanButton.Text = "Pesan";
             this.pelanggan4PesanButton.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox2.Location = new System.Drawing.Point(183, 9);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 40);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Pelanggan 4";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -244,9 +218,9 @@
             // gb_pelanggan3
             // 
             this.gb_pelanggan3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gb_pelanggan3.Controls.Add(this.label4);
             this.gb_pelanggan3.Controls.Add(this.pelanggan3AmbilPesananButton);
             this.gb_pelanggan3.Controls.Add(this.pelanggan3PesanButton);
-            this.gb_pelanggan3.Controls.Add(this.textBox3);
             this.gb_pelanggan3.Controls.Add(this.pictureBox3);
             this.gb_pelanggan3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_pelanggan3.Location = new System.Drawing.Point(816, 535);
@@ -287,19 +261,6 @@
             this.pelanggan3PesanButton.Text = "Pesan";
             this.pelanggan3PesanButton.UseVisualStyleBackColor = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox3.Location = new System.Drawing.Point(183, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 40);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "Pelanggan 3";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -314,9 +275,9 @@
             // gb_peanggan2
             // 
             this.gb_peanggan2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gb_peanggan2.Controls.Add(this.label3);
             this.gb_peanggan2.Controls.Add(this.pelanggan2AmbilPesananButton);
             this.gb_peanggan2.Controls.Add(this.pelanggan2PesanButton);
-            this.gb_peanggan2.Controls.Add(this.textBox4);
             this.gb_peanggan2.Controls.Add(this.pictureBox4);
             this.gb_peanggan2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_peanggan2.Location = new System.Drawing.Point(816, 303);
@@ -357,19 +318,6 @@
             this.pelanggan2PesanButton.Text = "Pesan";
             this.pelanggan2PesanButton.UseVisualStyleBackColor = false;
             // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox4.Location = new System.Drawing.Point(183, 9);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 40);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "Pelanggan 2";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = global::SimulasiAntrianPercetakan.Properties.Resources.businessman;
@@ -385,9 +333,9 @@
             // gb_pelanggan5
             // 
             this.gb_pelanggan5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gb_pelanggan5.Controls.Add(this.label6);
             this.gb_pelanggan5.Controls.Add(this.pelanggan5AmbilPesananButton);
             this.gb_pelanggan5.Controls.Add(this.pelanggan5PesanButton);
-            this.gb_pelanggan5.Controls.Add(this.textBox5);
             this.gb_pelanggan5.Controls.Add(this.pictureBox5);
             this.gb_pelanggan5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_pelanggan5.Location = new System.Drawing.Point(22, 535);
@@ -428,19 +376,6 @@
             this.pelanggan5PesanButton.Text = "Pesan";
             this.pelanggan5PesanButton.UseVisualStyleBackColor = false;
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox5.Location = new System.Drawing.Point(183, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 40);
-            this.textBox5.TabIndex = 1;
-            this.textBox5.Text = "Pelanggan 5";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -455,8 +390,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.berkasTercetakButton);
-            this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.bukaAntrianButton);
             this.groupBox1.Controls.Add(this.pictureBox6);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,19 +417,6 @@
             this.berkasTercetakButton.Text = "Berkas Tercetak";
             this.berkasTercetakButton.UseVisualStyleBackColor = false;
             // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.textBox6.Location = new System.Drawing.Point(314, 18);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 51);
-            this.textBox6.TabIndex = 8;
-            this.textBox6.Text = "Print Shop";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // bukaAntrianButton
             // 
             this.bukaAntrianButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
@@ -510,6 +432,7 @@
             this.bukaAntrianButton.TabIndex = 5;
             this.bukaAntrianButton.Text = "Buka Antrian";
             this.bukaAntrianButton.UseVisualStyleBackColor = false;
+            this.bukaAntrianButton.Click += new System.EventHandler(this.bukaAntrianButton_Click);
             // 
             // pictureBox6
             // 
@@ -532,6 +455,72 @@
             this.labelForm.Size = new System.Drawing.Size(373, 32);
             this.labelForm.TabIndex = 9;
             this.labelForm.Text = "Simulasi Antrian Percetakan";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label1.Location = new System.Drawing.Point(314, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 51);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Print Shop";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label2.Location = new System.Drawing.Point(183, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 39);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Pelanggan 1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label3.Location = new System.Drawing.Point(183, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 39);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Pelanggan 2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label4.Location = new System.Drawing.Point(183, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(168, 39);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Pelanggan 3";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label5.Location = new System.Drawing.Point(183, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 39);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Pelanggan 4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label6.Location = new System.Drawing.Point(183, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 39);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Pelanggan 5";
             // 
             // FormUtama
             // 
@@ -580,36 +569,36 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.GroupBox gb_pelanggan1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button pelanggan1AmbilPesananButton;
         private System.Windows.Forms.Button pelanggan1PesanButton;
         private System.Windows.Forms.GroupBox gb_pelanggan4;
         private System.Windows.Forms.Button pelanggan4AmbilPesananButton;
         private System.Windows.Forms.Button pelanggan4PesanButton;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox gb_pelanggan3;
         private System.Windows.Forms.Button pelanggan3AmbilPesananButton;
         private System.Windows.Forms.Button pelanggan3PesanButton;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox gb_peanggan2;
         private System.Windows.Forms.Button pelanggan2AmbilPesananButton;
         private System.Windows.Forms.Button pelanggan2PesanButton;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox gb_pelanggan5;
         private System.Windows.Forms.Button pelanggan5AmbilPesananButton;
         private System.Windows.Forms.Button pelanggan5PesanButton;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button bukaAntrianButton;
         private System.Windows.Forms.Button berkasTercetakButton;
         private System.Windows.Forms.Label labelForm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }
 
