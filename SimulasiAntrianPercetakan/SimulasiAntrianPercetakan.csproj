@@ -53,6 +53,12 @@
     <Compile Include="FormAntrian.Designer.cs">
       <DependentUpon>FormAntrian.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBerkasTercetak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBerkasTercetak.Designer.cs">
+      <DependentUpon>FormBerkasTercetak.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAntrian.resx">
       <DependentUpon>FormAntrian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBerkasTercetak.resx">
+      <DependentUpon>FormBerkasTercetak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

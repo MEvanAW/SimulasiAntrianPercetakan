@@ -416,6 +416,7 @@
             this.berkasTercetakButton.TabIndex = 9;
             this.berkasTercetakButton.Text = "Berkas Tercetak";
             this.berkasTercetakButton.UseVisualStyleBackColor = false;
+            this.berkasTercetakButton.Click += new System.EventHandler(this.berkasTercetakButton_Click);
             // 
             // bukaAntrianButton
             // 

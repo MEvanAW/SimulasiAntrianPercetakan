@@ -16,15 +16,18 @@ namespace SimulasiAntrianPercetakan
         {
             InitializeComponent();
         }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-
         private void bukaAntrianButton_Click(object sender, EventArgs e)
         {
             new FormAntrian().Show();
+        }
+
+        private void berkasTercetakButton_Click(object sender, EventArgs e)
+        {
+            new FormBerkasTercetak().Show();
         }
     }
 }
