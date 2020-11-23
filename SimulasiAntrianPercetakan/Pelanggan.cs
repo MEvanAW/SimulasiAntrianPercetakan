@@ -10,19 +10,12 @@ namespace SimulasiAntrianPercetakan
     {
         // Atribut pelanggan
         private int _idPelanggan;
-        private string _loginName;
-        private string _password;
-        private int _securityLevel = 1;
+        private List<string> _berkasDimiliki = new List<string>();
 
         // Constructor pelanggan
         public Pelanggan(int idPelanggan)
         {
             _idPelanggan = idPelanggan;
-        }
-        public Pelanggan(int idPelanggan, int securityLevel)
-        {
-            _idPelanggan = idPelanggan;
-            _securityLevel = securityLevel;
         }
 
         // Properties pelanggan
@@ -30,24 +23,21 @@ namespace SimulasiAntrianPercetakan
         {
             get { return IdPelanggan; }
         }
-        public string LoginName
+        public List<string> BerkasDimiliki
         {
-            get { return _loginName; }
-            set { _loginName = value; }
-        }
-        public string Password
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
-        public int SecurityLevel
-        {
-            get { return _securityLevel; }
+            get { return _berkasDimiliki; }
         }
 
         // Behaviour pelanggan
-        public void mulaiMemesan() { }
-        public void ambilPesanan() { }
-        public void memberiTanggapan() { }
+        public void Pesan(string namaBerkas, bool isEkspres) {
+            Percetakan.TerimaPesanan(new Pesanan(_idPelanggan, namaBerkas, isEkspres));
+        }
+        public void AmbilPesanan() {
+            foreach (Pesanan pesanan in Percetakan.BerkasTercetak)
+                if (pesanan.idPelanggan == _idPelanggan)
+                    BerkasDimiliki.Add(pesanan.namaBerkas);
+            foreach (string namaBerkas in _berkasDimiliki)
+                Percetakan.BerkasTercetak.Remove(Percetakan.BerkasTercetak.Single(pesanan => pesanan.namaBerkas == namaBerkas && pesanan.idPelanggan == _idPelanggan));
+        }
     }
 }

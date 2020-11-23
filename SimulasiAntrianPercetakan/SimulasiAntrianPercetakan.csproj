@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAmbilPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAmbilPesanan.Designer.cs">
+      <DependentUpon>FormAmbilPesanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAntrian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Percetakan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAmbilPesanan.resx">
+      <DependentUpon>FormAmbilPesanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAntrian.resx">
       <DependentUpon>FormAntrian.cs</DependentUpon>
     </EmbeddedResource>

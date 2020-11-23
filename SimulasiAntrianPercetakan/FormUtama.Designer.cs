@@ -114,6 +114,7 @@
             this.pelanggan1AmbilPesananButton.TabIndex = 3;
             this.pelanggan1AmbilPesananButton.Text = "Ambil Pesanan";
             this.pelanggan1AmbilPesananButton.UseVisualStyleBackColor = false;
+            this.pelanggan1AmbilPesananButton.Click += new System.EventHandler(this.pelanggan1AmbilPesananButton_Click);
             // 
             // pelanggan1PesanButton
             // 
@@ -188,6 +189,7 @@
             this.pelanggan4AmbilPesananButton.TabIndex = 6;
             this.pelanggan4AmbilPesananButton.Text = "Ambil Pesanan";
             this.pelanggan4AmbilPesananButton.UseVisualStyleBackColor = false;
+            this.pelanggan4AmbilPesananButton.Click += new System.EventHandler(this.pelanggan4AmbilPesananButton_Click);
             // 
             // pelanggan4PesanButton
             // 
@@ -246,6 +248,7 @@
             this.pelanggan3AmbilPesananButton.TabIndex = 6;
             this.pelanggan3AmbilPesananButton.Text = "Ambil Pesanan";
             this.pelanggan3AmbilPesananButton.UseVisualStyleBackColor = false;
+            this.pelanggan3AmbilPesananButton.Click += new System.EventHandler(this.pelanggan3AmbilPesananButton_Click);
             // 
             // pelanggan3PesanButton
             // 
@@ -304,6 +307,7 @@
             this.pelanggan2AmbilPesananButton.TabIndex = 6;
             this.pelanggan2AmbilPesananButton.Text = "Ambil Pesanan";
             this.pelanggan2AmbilPesananButton.UseVisualStyleBackColor = false;
+            this.pelanggan2AmbilPesananButton.Click += new System.EventHandler(this.pelanggan2AmbilPesananButton_Click);
             // 
             // pelanggan2PesanButton
             // 
@@ -363,6 +367,7 @@
             this.pelanggan5AmbilPesananButton.TabIndex = 6;
             this.pelanggan5AmbilPesananButton.Text = "Ambil Pesanan";
             this.pelanggan5AmbilPesananButton.UseVisualStyleBackColor = false;
+            this.pelanggan5AmbilPesananButton.Click += new System.EventHandler(this.pelanggan5AmbilPesananButton_Click);
             // 
             // pelanggan5PesanButton
             // 

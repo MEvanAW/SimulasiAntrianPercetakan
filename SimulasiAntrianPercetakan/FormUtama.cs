@@ -12,6 +12,16 @@ namespace SimulasiAntrianPercetakan
 {
     public partial class FormUtama : Form
     {
+        // Atribut FormUtama
+        internal static Pelanggan[] pelanggan = {
+            new Pelanggan(0),
+            new Pelanggan(1),
+            new Pelanggan(2),
+            new Pelanggan(3),
+            new Pelanggan(4),
+            new Pelanggan(5)
+        };
+
         public FormUtama()
         {
             InitializeComponent();
@@ -32,27 +42,52 @@ namespace SimulasiAntrianPercetakan
 
         private void pelanggan1PesanButton_Click(object sender, EventArgs e)
         {
-            new FormPesan().Show();
+            new FormPesan(1).Show();
         }
 
         private void pelanggan2PesanButton_Click(object sender, EventArgs e)
         {
-            new FormPesan().Show();
+            new FormPesan(2).Show();
         }
 
         private void pelanggan3PesanButton_Click(object sender, EventArgs e)
         {
-            new FormPesan().Show();
+            new FormPesan(3).Show();
         }
 
         private void pelanggan4PesanButton_Click(object sender, EventArgs e)
         {
-            new FormPesan().Show();
+            new FormPesan(4).Show();
         }
 
         private void pelanggan5PesanButton_Click(object sender, EventArgs e)
         {
-            new FormPesan().Show();
+            new FormPesan(5).Show();
+        }
+
+        private void pelanggan1AmbilPesananButton_Click(object sender, EventArgs e)
+        {
+            new FormAmbilPesanan().Show();
+        }
+
+        private void pelanggan2AmbilPesananButton_Click(object sender, EventArgs e)
+        {
+            new FormAmbilPesanan().Show();
+        }
+
+        private void pelanggan3AmbilPesananButton_Click(object sender, EventArgs e)
+        {
+            new FormAmbilPesanan().Show();
+        }
+
+        private void pelanggan4AmbilPesananButton_Click(object sender, EventArgs e)
+        {
+            new FormAmbilPesanan().Show();
+        }
+
+        private void pelanggan5AmbilPesananButton_Click(object sender, EventArgs e)
+        {
+            new FormAmbilPesanan().Show();
         }
     }
 }

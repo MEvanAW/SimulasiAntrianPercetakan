@@ -6,59 +6,80 @@ using System.Threading.Tasks;
 
 namespace SimulasiAntrianPercetakan
 {
-    class Percetakan
+    static class Percetakan
     {
         // Atribut percetakan
-        public LinkedList<Pesanan> antrian { get; } = new LinkedList<Pesanan>();
-        private int jumlahPrinter = 1;
-        private int jumlahPrinterOn = 1;
+        public static LinkedList<Pesanan> Antrian = new LinkedList<Pesanan>();
+        public static List<Pesanan> BerkasTercetak = new List<Pesanan>();
+        private static int _jumlahPrinter = 1;
+        private static int _jumlahPrinterOn = 1;
+
+        // Property percetakan
+        public static int JumlahPrinter{
+            get {return _jumlahPrinter; }
+            set {
+                _jumlahPrinter = value;
+                // Jika printer hidup lebih banyak dari printer yang ada, tidak logis
+                if (_jumlahPrinterOn > _jumlahPrinter)
+                    // Maka dilakukan penyesuaian:
+                    _jumlahPrinterOn = _jumlahPrinter; }
+        }
+        public static int JumlahPrinterOn{
+            get { return _jumlahPrinterOn; }
+            set {
+                if (value <= _jumlahPrinter)
+                    _jumlahPrinterOn = value;
+                else // Jika printer hidup lebih banyak dari printer yang ada, tidak logis
+                     // Maka dilakukan penyesuaian:
+                    _jumlahPrinterOn = _jumlahPrinter; }
+        }
+        public static List<Pesanan> AntrianBiasa{
+            get {
+                List<Pesanan> returnList = new List<Pesanan>();
+                foreach (Pesanan pesanan in Antrian)
+                    if(!pesanan.isEkspres)
+                        returnList.Add(pesanan);
+                return returnList;
+            }
+        }
+        public static List<Pesanan> AntrianEkspres{
+            get {
+                List<Pesanan> returnList = new List<Pesanan>();
+                foreach (Pesanan pesanan in Antrian)
+                    if (pesanan.isEkspres)
+                        returnList.Add(pesanan);
+                return returnList;
+            }
+        }
 
         // Behaviour percetakan
-        public void terimaPesanan() { }
-        public void mulaiMencetak() { }
-        public void berhentiMencetak() { }
-        public void ubahJumlahPrinter(int jumlahPrinter) {
-            this.jumlahPrinter = jumlahPrinter;
-            // Jika printer hidup lebih banyak dari printer yang ada, tidak logis
-            if (jumlahPrinterOn > jumlahPrinter)
-                // Maka dilakukan penyesuaian:
-                jumlahPrinterOn = jumlahPrinter;
-        }
-        public void ubahJumlahPrinterOn(int jumlahPrinterOn) {
-            if (jumlahPrinterOn <= jumlahPrinter)
-                this.jumlahPrinterOn = jumlahPrinterOn;
-            else // Jika printer hidup lebih banyak dari printer yang ada, tidak logis
-                // Maka dilakukan penyesuaian:
-                this.jumlahPrinterOn = jumlahPrinter;
-        }
-        public void lihatPesananEkspress() { }
-        public void lihatPesananBiasa() { }
-        public void enqueue(Pesanan pesanan)
+        public static void TerimaPesanan(Pesanan pesanan)
         {
             var nodePesanan = new LinkedListNode<Pesanan>(pesanan);
-            if (antrian.First == null)
-                antrian.AddFirst(nodePesanan);
+            if (Antrian.First == null)
+                Antrian.AddFirst(nodePesanan);
             else
             {
-                var pointer = antrian.First;
-                while (pointer.Next != null & pointer.Value.prioritas < pesanan.prioritas)
-                    pointer = pointer.Next;
-                if (pointer.Value.prioritas <= pesanan.prioritas)
-                    antrian.AddAfter(pointer, pesanan);
+                var pointer = Antrian.First;
+                while (pointer.Next != null && pointer.Value.isEkspres && !pesanan.isEkspres)
+                    while (pointer.Next != null && pointer.Value.timeStamp < pesanan.timeStamp && pointer.Value.isEkspres == pesanan.isEkspres)
+                        pointer = pointer.Next;
+                if (pointer.Value.timeStamp <= pesanan.timeStamp)
+                    Antrian.AddAfter(pointer, pesanan);
                 else
-                    antrian.AddBefore(pointer, pesanan);
+                    Antrian.AddBefore(pointer, pesanan);
             }
-
         }
-        public Pesanan dequeue()
+        public static bool Cetak()
         {
-            if (antrian.Any())
+            if (Antrian.Any())
             {
-                var pesananUntukDihapus = antrian.First.Value;
-                antrian.RemoveFirst();
-                return pesananUntukDihapus;
+                BerkasTercetak.Add(Antrian.First.Value);
+                Antrian.RemoveFirst();
+                return true;
             }
-            return default;
+            else
+                return false;
         }
     }
 }
