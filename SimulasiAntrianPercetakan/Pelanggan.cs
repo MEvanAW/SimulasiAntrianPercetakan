@@ -37,7 +37,7 @@ namespace SimulasiAntrianPercetakan
                 if (pesanan.idPelanggan == _idPelanggan)
                     BerkasDimiliki.Add(pesanan.namaBerkas);
             foreach (string namaBerkas in _berkasDimiliki)
-                Percetakan.BerkasTercetak.Remove(Percetakan.BerkasTercetak.Single(pesanan => pesanan.namaBerkas == namaBerkas && pesanan.idPelanggan == _idPelanggan));
+                Percetakan.BerkasTercetak.RemoveAll(pesanan => pesanan.namaBerkas == namaBerkas && pesanan.idPelanggan == _idPelanggan);
         }
     }
 }

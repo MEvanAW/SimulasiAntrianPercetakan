@@ -22,10 +22,13 @@ namespace SimulasiAntrianPercetakan
             new Pelanggan(5)
         };
 
+        // Konstruktor FormUtama
         public FormUtama()
         {
             InitializeComponent();
         }
+
+        // Behaviour FormUtama
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Close();
@@ -34,60 +37,49 @@ namespace SimulasiAntrianPercetakan
         {
             new FormAntrian().Show();
         }
-
         private void berkasTercetakButton_Click(object sender, EventArgs e)
         {
             new FormBerkasTercetak().Show();
         }
-
         private void pelanggan1PesanButton_Click(object sender, EventArgs e)
         {
             new FormPesan(1).Show();
         }
-
         private void pelanggan2PesanButton_Click(object sender, EventArgs e)
         {
             new FormPesan(2).Show();
         }
-
         private void pelanggan3PesanButton_Click(object sender, EventArgs e)
         {
             new FormPesan(3).Show();
         }
-
         private void pelanggan4PesanButton_Click(object sender, EventArgs e)
         {
             new FormPesan(4).Show();
         }
-
         private void pelanggan5PesanButton_Click(object sender, EventArgs e)
         {
             new FormPesan(5).Show();
         }
-
         private void pelanggan1AmbilPesananButton_Click(object sender, EventArgs e)
         {
-            new FormAmbilPesanan().Show();
+            new FormAmbilPesanan(1).Show();
         }
-
         private void pelanggan2AmbilPesananButton_Click(object sender, EventArgs e)
         {
-            new FormAmbilPesanan().Show();
+            new FormAmbilPesanan(2).Show();
         }
-
         private void pelanggan3AmbilPesananButton_Click(object sender, EventArgs e)
         {
-            new FormAmbilPesanan().Show();
+            new FormAmbilPesanan(3).Show();
         }
-
         private void pelanggan4AmbilPesananButton_Click(object sender, EventArgs e)
         {
-            new FormAmbilPesanan().Show();
+            new FormAmbilPesanan(4).Show();
         }
-
         private void pelanggan5AmbilPesananButton_Click(object sender, EventArgs e)
         {
-            new FormAmbilPesanan().Show();
+            new FormAmbilPesanan(5).Show();
         }
     }
 }
