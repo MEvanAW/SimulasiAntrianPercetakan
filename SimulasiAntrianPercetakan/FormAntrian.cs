@@ -24,11 +24,11 @@ namespace SimulasiAntrianPercetakan
             InitializeComponent();
             PerbaruiAntrianBiasaLabel();
             PerbaruiAntrianEkspresLabel();
-            sudahDicetakLabel.Text = "";
+            baruSajaDicetakLabel.Text = "";
             if (antrianBiasa.Count == 0 && antrianEkspres.Count == 0)
             {
                 mulaiMencetakButton.Enabled = false;
-                sedangDicetakLabel.Text = "Antrian print sedang kosong.";
+                akanDicetakLabel.Text = "Antrian print sedang kosong.";
             }
         }
 
@@ -47,13 +47,13 @@ namespace SimulasiAntrianPercetakan
             if (Percetakan.AntrianBiasa.Count == 0 && Percetakan.AntrianEkspres.Count == 0)
             {
                 cetakButton.Enabled = false;
-                sedangDicetakLabel.Text = "Semua berkas sudah dicetak.";
+                akanDicetakLabel.Text = "Semua berkas sudah dicetak.";
             }
             // Memperbarui sudahDicetakLabel.Text
-            sudahDicetakLabel.Text = "";
+            baruSajaDicetakLabel.Text = "";
             for (int index = 0; index < sudahDicetak.Count; index++)
             {
-                sudahDicetakLabel.Text += (index + 1).ToString() + ". " +
+                baruSajaDicetakLabel.Text += (index + 1).ToString() + ". " +
                     "Pelanggan" + sudahDicetak[index].idPelanggan.ToString() + ": " +
                     sudahDicetak[index].namaBerkas + "\n";
             }
@@ -65,7 +65,7 @@ namespace SimulasiAntrianPercetakan
                 sedangDicetak = antrianEkspres[0];
                 antrianEkspres.RemoveAt(0);
                 PerbaruiAntrianEkspresLabel();
-                sedangDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
+                akanDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
                     sedangDicetak.namaBerkas;
             }
             else if (antrianBiasaLabel.Text != "")
@@ -73,7 +73,7 @@ namespace SimulasiAntrianPercetakan
                 sedangDicetak = antrianBiasa[0];
                 antrianBiasa.RemoveAt(0);
                 PerbaruiAntrianBiasaLabel();
-                sedangDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
+                akanDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
                     sedangDicetak.namaBerkas;
             }
         }
@@ -82,7 +82,7 @@ namespace SimulasiAntrianPercetakan
             berhentiMencetakButton.Enabled = false;
             cetakButton.Enabled = false;
             mulaiMencetakButton.Enabled = true;
-            sedangDicetakLabel.Text = "Klik mulai mencetak.";
+            akanDicetakLabel.Text = "Klik mulai mencetak.";
             if (sedangDicetak.isEkspres)
             {
                 antrianEkspres.Insert(0, sedangDicetak);

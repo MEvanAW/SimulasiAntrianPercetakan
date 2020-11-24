@@ -29,40 +29,54 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.berkasTercetakGroupBox = new System.Windows.Forms.GroupBox();
+            this.panel = new System.Windows.Forms.Panel();
+            this.berkasTercetakLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.berkasTercetakGroupBox.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.berkasTercetakGroupBox);
             this.panel1.Location = new System.Drawing.Point(12, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(346, 431);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // berkasTercetakGroupBox
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(13, 14);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 403);
-            this.panel2.TabIndex = 0;
+            this.berkasTercetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.berkasTercetakGroupBox.Controls.Add(this.panel);
+            this.berkasTercetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.berkasTercetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.berkasTercetakGroupBox.Location = new System.Drawing.Point(13, 15);
+            this.berkasTercetakGroupBox.Name = "berkasTercetakGroupBox";
+            this.berkasTercetakGroupBox.Size = new System.Drawing.Size(319, 399);
+            this.berkasTercetakGroupBox.TabIndex = 13;
+            this.berkasTercetakGroupBox.TabStop = false;
+            this.berkasTercetakGroupBox.Text = "Berkas Tercetak";
             // 
-            // label1
+            // panel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(43, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 39);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Berkas Tercetak";
+            this.panel.AutoScroll = true;
+            this.panel.Controls.Add(this.berkasTercetakLabel);
+            this.panel.Location = new System.Drawing.Point(0, 41);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(319, 358);
+            this.panel.TabIndex = 1;
+            // 
+            // berkasTercetakLabel
+            // 
+            this.berkasTercetakLabel.AutoSize = true;
+            this.berkasTercetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.berkasTercetakLabel.Location = new System.Drawing.Point(1, 1);
+            this.berkasTercetakLabel.Name = "berkasTercetakLabel";
+            this.berkasTercetakLabel.Size = new System.Drawing.Size(197, 27);
+            this.berkasTercetakLabel.TabIndex = 0;
+            this.berkasTercetakLabel.Text = "berkasTercetakLabel";
             // 
             // FormBerkasTercetak
             // 
@@ -74,8 +88,9 @@
             this.Name = "FormBerkasTercetak";
             this.Text = "Form Berkas Tercetak";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.berkasTercetakGroupBox.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -83,7 +98,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox berkasTercetakGroupBox;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Label berkasTercetakLabel;
     }
 }

@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sedangDicetakGroupBox = new System.Windows.Forms.GroupBox();
-            this.sudahDicetakLabel = new System.Windows.Forms.Label();
+            this.akanDicetakGroupBox = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.baruSajaDicetakLabel = new System.Windows.Forms.Label();
             this.cetakButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.sedangDicetakLabel = new System.Windows.Forms.Label();
+            this.akanDicetakLabel = new System.Windows.Forms.Label();
             this.antrianEkspresGroupBox = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.antrianEkspresLabel = new System.Windows.Forms.Label();
             this.antrianBiasaGroupBox = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.antrianBiasaLabel = new System.Windows.Forms.Label();
             this.mulaiMencetakButton = new System.Windows.Forms.Button();
             this.berhentiMencetakButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.sedangDicetakGroupBox.SuspendLayout();
+            this.akanDicetakGroupBox.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.antrianEkspresGroupBox.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.antrianBiasaGroupBox.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.sedangDicetakGroupBox);
+            this.panel1.Controls.Add(this.akanDicetakGroupBox);
             this.panel1.Controls.Add(this.antrianEkspresGroupBox);
             this.panel1.Controls.Add(this.antrianBiasaGroupBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -63,31 +63,40 @@
             this.panel1.Size = new System.Drawing.Size(972, 385);
             this.panel1.TabIndex = 0;
             // 
-            // sedangDicetakGroupBox
+            // akanDicetakGroupBox
             // 
-            this.sedangDicetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.sedangDicetakGroupBox.Controls.Add(this.panel4);
-            this.sedangDicetakGroupBox.Controls.Add(this.cetakButton);
-            this.sedangDicetakGroupBox.Controls.Add(this.label1);
-            this.sedangDicetakGroupBox.Controls.Add(this.sedangDicetakLabel);
-            this.sedangDicetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
-            this.sedangDicetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
-            this.sedangDicetakGroupBox.Location = new System.Drawing.Point(652, 14);
-            this.sedangDicetakGroupBox.Name = "sedangDicetakGroupBox";
-            this.sedangDicetakGroupBox.Size = new System.Drawing.Size(307, 354);
-            this.sedangDicetakGroupBox.TabIndex = 14;
-            this.sedangDicetakGroupBox.TabStop = false;
-            this.sedangDicetakGroupBox.Text = "Sedang Dicetak";
+            this.akanDicetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.akanDicetakGroupBox.Controls.Add(this.panel4);
+            this.akanDicetakGroupBox.Controls.Add(this.cetakButton);
+            this.akanDicetakGroupBox.Controls.Add(this.label1);
+            this.akanDicetakGroupBox.Controls.Add(this.akanDicetakLabel);
+            this.akanDicetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.akanDicetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.akanDicetakGroupBox.Location = new System.Drawing.Point(652, 14);
+            this.akanDicetakGroupBox.Name = "akanDicetakGroupBox";
+            this.akanDicetakGroupBox.Size = new System.Drawing.Size(307, 354);
+            this.akanDicetakGroupBox.TabIndex = 14;
+            this.akanDicetakGroupBox.TabStop = false;
+            this.akanDicetakGroupBox.Text = "Akan Dicetak";
             // 
-            // sudahDicetakLabel
+            // panel4
             // 
-            this.sudahDicetakLabel.AutoSize = true;
-            this.sudahDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
-            this.sudahDicetakLabel.Location = new System.Drawing.Point(6, 4);
-            this.sudahDicetakLabel.Name = "sudahDicetakLabel";
-            this.sudahDicetakLabel.Size = new System.Drawing.Size(199, 27);
-            this.sudahDicetakLabel.TabIndex = 12;
-            this.sudahDicetakLabel.Text = "Klik mulai mencetak.";
+            this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.baruSajaDicetakLabel);
+            this.panel4.Location = new System.Drawing.Point(0, 160);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(307, 194);
+            this.panel4.TabIndex = 13;
+            // 
+            // baruSajaDicetakLabel
+            // 
+            this.baruSajaDicetakLabel.AutoSize = true;
+            this.baruSajaDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.baruSajaDicetakLabel.Location = new System.Drawing.Point(6, 4);
+            this.baruSajaDicetakLabel.Name = "baruSajaDicetakLabel";
+            this.baruSajaDicetakLabel.Size = new System.Drawing.Size(199, 27);
+            this.baruSajaDicetakLabel.TabIndex = 12;
+            this.baruSajaDicetakLabel.Text = "Klik mulai mencetak.";
             // 
             // cetakButton
             // 
@@ -114,19 +123,19 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
             this.label1.Location = new System.Drawing.Point(6, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 39);
+            this.label1.Size = new System.Drawing.Size(250, 39);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Sudah Dicetak";
+            this.label1.Text = "Baru Saja Dicetak";
             // 
-            // sedangDicetakLabel
+            // akanDicetakLabel
             // 
-            this.sedangDicetakLabel.AutoSize = true;
-            this.sedangDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
-            this.sedangDicetakLabel.Location = new System.Drawing.Point(6, 47);
-            this.sedangDicetakLabel.Name = "sedangDicetakLabel";
-            this.sedangDicetakLabel.Size = new System.Drawing.Size(199, 27);
-            this.sedangDicetakLabel.TabIndex = 2;
-            this.sedangDicetakLabel.Text = "Klik mulai mencetak.";
+            this.akanDicetakLabel.AutoSize = true;
+            this.akanDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.akanDicetakLabel.Location = new System.Drawing.Point(6, 47);
+            this.akanDicetakLabel.Name = "akanDicetakLabel";
+            this.akanDicetakLabel.Size = new System.Drawing.Size(199, 27);
+            this.akanDicetakLabel.TabIndex = 2;
+            this.akanDicetakLabel.Text = "Klik mulai mencetak.";
             // 
             // antrianEkspresGroupBox
             // 
@@ -140,6 +149,15 @@
             this.antrianEkspresGroupBox.TabIndex = 13;
             this.antrianEkspresGroupBox.TabStop = false;
             this.antrianEkspresGroupBox.Text = "Antrian Ekspres";
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.antrianEkspresLabel);
+            this.panel3.Location = new System.Drawing.Point(0, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(307, 313);
+            this.panel3.TabIndex = 2;
             // 
             // antrianEkspresLabel
             // 
@@ -163,6 +181,15 @@
             this.antrianBiasaGroupBox.TabIndex = 12;
             this.antrianBiasaGroupBox.TabStop = false;
             this.antrianBiasaGroupBox.Text = "Antrian Biasa";
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.antrianBiasaLabel);
+            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(307, 313);
+            this.panel2.TabIndex = 1;
             // 
             // antrianBiasaLabel
             // 
@@ -209,33 +236,6 @@
             this.berhentiMencetakButton.UseVisualStyleBackColor = false;
             this.berhentiMencetakButton.Click += new System.EventHandler(this.berhentiMencetakButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.antrianBiasaLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 313);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.antrianEkspresLabel);
-            this.panel3.Location = new System.Drawing.Point(0, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(307, 313);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.AutoScroll = true;
-            this.panel4.Controls.Add(this.sudahDicetakLabel);
-            this.panel4.Location = new System.Drawing.Point(0, 160);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(307, 194);
-            this.panel4.TabIndex = 13;
-            // 
             // FormAntrian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -248,16 +248,16 @@
             this.Name = "FormAntrian";
             this.Text = "Form Antrian";
             this.panel1.ResumeLayout(false);
-            this.sedangDicetakGroupBox.ResumeLayout(false);
-            this.sedangDicetakGroupBox.PerformLayout();
+            this.akanDicetakGroupBox.ResumeLayout(false);
+            this.akanDicetakGroupBox.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.antrianEkspresGroupBox.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.antrianBiasaGroupBox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,13 +267,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button mulaiMencetakButton;
         private System.Windows.Forms.Button berhentiMencetakButton;
-        private System.Windows.Forms.GroupBox sedangDicetakGroupBox;
+        private System.Windows.Forms.GroupBox akanDicetakGroupBox;
         private System.Windows.Forms.GroupBox antrianEkspresGroupBox;
         private System.Windows.Forms.GroupBox antrianBiasaGroupBox;
-        private System.Windows.Forms.Label sedangDicetakLabel;
+        private System.Windows.Forms.Label akanDicetakLabel;
         private System.Windows.Forms.Label antrianEkspresLabel;
         private System.Windows.Forms.Label antrianBiasaLabel;
-        private System.Windows.Forms.Label sudahDicetakLabel;
+        private System.Windows.Forms.Label baruSajaDicetakLabel;
         private System.Windows.Forms.Button cetakButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
