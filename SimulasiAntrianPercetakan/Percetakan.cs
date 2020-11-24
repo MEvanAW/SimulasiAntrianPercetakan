@@ -50,18 +50,24 @@ namespace SimulasiAntrianPercetakan
             else
                 _antrianEkspres.Enqueue(pesanan);
         }
-        public static void Cetak()
+        public static Pesanan Cetak()
         {
             if (_antrianEkspres.Any())
             {
-                BerkasTercetak.Add(_antrianEkspres.Peek());
+                Pesanan pesanan = _antrianEkspres.Peek();
+                BerkasTercetak.Add(pesanan);
                 _antrianEkspres.Dequeue();
+                return pesanan;
             }
             else if (_antrianBiasa.Any())
             {
-                BerkasTercetak.Add(_antrianBiasa.Peek());
+                Pesanan pesanan = _antrianBiasa.Peek();
+                BerkasTercetak.Add(pesanan);
                 _antrianBiasa.Dequeue();
+                return pesanan;
             }
+            else
+                return new Pesanan(0, "", false);
         }
     }
 }

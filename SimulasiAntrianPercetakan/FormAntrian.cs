@@ -13,9 +13,10 @@ namespace SimulasiAntrianPercetakan
     public partial class FormAntrian : Form
     {
         // Atribut FormAntrian
-        private bool sedangMencetak;
         private List<Pesanan> antrianBiasa = Percetakan.AntrianBiasa;
         private List<Pesanan> antrianEkspres = Percetakan.AntrianEkspres;
+        private List<Pesanan> sudahDicetak = new List<Pesanan>();
+        Pesanan sedangDicetak;
 
         // Constructor FormAntrian
         public FormAntrian()
@@ -23,62 +24,74 @@ namespace SimulasiAntrianPercetakan
             InitializeComponent();
             PerbaruiAntrianBiasaLabel();
             PerbaruiAntrianEkspresLabel();
-            sedangDicetakLabel.Text = "";
-            cetakProgressBar.Minimum = 0;
-            cetakProgressBar.Maximum = 500000;
-            cetakProgressBar.Value = 0;
-            cetakProgressBar.Step = 1;
+            sudahDicetakLabel.Text = "";
+            if (antrianBiasa.Count == 0 && antrianEkspres.Count == 0)
+            {
+                mulaiMencetakButton.Enabled = false;
+                sedangDicetakLabel.Text = "Antrian print sedang kosong.";
+            }
         }
 
         // Behaviour FormAntrian
         private void mulaiMencetakButton_Click(object sender, EventArgs e)
         {
-            Pesanan pesanan;
-            sedangMencetak = true;
-            int count = antrianBiasa.Count + antrianEkspres.Count;
-            for (int i = 0; i < count && sedangMencetak; i++)
+            mulaiMencetakButton.Enabled = false;
+            cetakButton.Enabled = true;
+            berhentiMencetakButton.Enabled = true;
+            BersiapMencetak();
+        }
+        private void cetakButton_Click(object sender, EventArgs e)
+        {
+            sudahDicetak.Add(Percetakan.Cetak());
+            BersiapMencetak();
+            if (Percetakan.AntrianBiasa.Count == 0 && Percetakan.AntrianEkspres.Count == 0)
             {
-                if (antrianEkspresLabel.Text != "")
-                {
-                    MessageBox.Show("mulai if");
-                    pesanan = antrianEkspres[0];
-                    antrianEkspres.RemoveAt(0);
-                    PerbaruiAntrianEkspresLabel();
-                    sedangDicetakLabel.Text = "Pelanggan" + pesanan.idPelanggan.ToString() + ": " +
-                        pesanan.namaBerkas;
-                    for (int x = 0; x < 500000; x++)
-                        cetakProgressBar.PerformStep();
-                    Percetakan.Cetak();
-                    cetakProgressBar.Value = 0;
-                }
-                else if (antrianBiasaLabel.Text != "")
-                {
-                    MessageBox.Show("mulai else if");
-                    pesanan = antrianBiasa[0];
-                    antrianBiasa.RemoveAt(0);
-                    PerbaruiAntrianBiasaLabel();
-                    sedangDicetakLabel.Text = "Pelanggan" + pesanan.idPelanggan.ToString() + ": " +
-                        pesanan.namaBerkas;
-                    for (int x = 0; x < 500000; x++)
-                        cetakProgressBar.PerformStep();
-                    Percetakan.Cetak();
-                    cetakProgressBar.Value = 0;
-                }
+                cetakButton.Enabled = false;
+                sedangDicetakLabel.Text = "Semua berkas sudah dicetak.";
             }
-            sedangDicetakLabel.Text = "";
+            // Memperbarui sudahDicetakLabel.Text
+            sudahDicetakLabel.Text = "";
+            for (int index = 0; index < sudahDicetak.Count; index++)
+            {
+                sudahDicetakLabel.Text += (index + 1).ToString() + ". " +
+                    "Pelanggan" + sudahDicetak[index].idPelanggan.ToString() + ": " +
+                    sudahDicetak[index].namaBerkas + "\n";
+            }
+        }
+        private void BersiapMencetak()
+        {
+            if (antrianEkspresLabel.Text != "")
+            {
+                sedangDicetak = antrianEkspres[0];
+                antrianEkspres.RemoveAt(0);
+                PerbaruiAntrianEkspresLabel();
+                sedangDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
+                    sedangDicetak.namaBerkas;
+            }
+            else if (antrianBiasaLabel.Text != "")
+            {
+                sedangDicetak = antrianBiasa[0];
+                antrianBiasa.RemoveAt(0);
+                PerbaruiAntrianBiasaLabel();
+                sedangDicetakLabel.Text = "Pelanggan" + sedangDicetak.idPelanggan.ToString() + ": " +
+                    sedangDicetak.namaBerkas;
+            }
         }
         private void berhentiMencetakButton_Click(object sender, EventArgs e)
         {
-            sedangMencetak = false;
-        }
-        private void PerbaruiAntrianBiasaLabel()
-        {
-            antrianBiasaLabel.Text = "";
-            for (int index = 0; index < antrianBiasa.Count; index++)
+            berhentiMencetakButton.Enabled = false;
+            cetakButton.Enabled = false;
+            mulaiMencetakButton.Enabled = true;
+            sedangDicetakLabel.Text = "Klik mulai mencetak.";
+            if (sedangDicetak.isEkspres)
             {
-                antrianBiasaLabel.Text += (index + 1).ToString() + ". " +
-                    "Pelanggan" + antrianBiasa[index].idPelanggan.ToString() + ": " +
-                    antrianBiasa[index].namaBerkas + "\n";
+                antrianEkspres.Insert(0, sedangDicetak);
+                PerbaruiAntrianEkspresLabel();
+            }
+            else
+            {
+                antrianBiasa.Insert(0, sedangDicetak);
+                PerbaruiAntrianBiasaLabel();
             }
         }
         private void PerbaruiAntrianEkspresLabel()
@@ -89,6 +102,16 @@ namespace SimulasiAntrianPercetakan
                 antrianEkspresLabel.Text += (index + 1).ToString() + ". " +
                     "Pelanggan" + antrianEkspres[index].idPelanggan.ToString() + ": " +
                     antrianEkspres[index].namaBerkas + "\n";
+            }
+        }
+        private void PerbaruiAntrianBiasaLabel()
+        {
+            antrianBiasaLabel.Text = "";
+            for (int index = 0; index < antrianBiasa.Count; index++)
+            {
+                antrianBiasaLabel.Text += (index + 1).ToString() + ". " +
+                    "Pelanggan" + antrianBiasa[index].idPelanggan.ToString() + ": " +
+                    antrianBiasa[index].namaBerkas + "\n";
             }
         }
     }

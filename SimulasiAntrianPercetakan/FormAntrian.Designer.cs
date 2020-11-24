@@ -30,6 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.sedangDicetakGroupBox = new System.Windows.Forms.GroupBox();
+            this.sudahDicetakLabel = new System.Windows.Forms.Label();
+            this.cetakButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.sedangDicetakLabel = new System.Windows.Forms.Label();
             this.antrianEkspresGroupBox = new System.Windows.Forms.GroupBox();
             this.antrianEkspresLabel = new System.Windows.Forms.Label();
@@ -37,7 +40,6 @@
             this.antrianBiasaLabel = new System.Windows.Forms.Label();
             this.mulaiMencetakButton = new System.Windows.Forms.Button();
             this.berhentiMencetakButton = new System.Windows.Forms.Button();
-            this.cetakProgressBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.sedangDicetakGroupBox.SuspendLayout();
             this.antrianEkspresGroupBox.SuspendLayout();
@@ -58,7 +60,9 @@
             // sedangDicetakGroupBox
             // 
             this.sedangDicetakGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.sedangDicetakGroupBox.Controls.Add(this.cetakProgressBar);
+            this.sedangDicetakGroupBox.Controls.Add(this.sudahDicetakLabel);
+            this.sedangDicetakGroupBox.Controls.Add(this.cetakButton);
+            this.sedangDicetakGroupBox.Controls.Add(this.label1);
             this.sedangDicetakGroupBox.Controls.Add(this.sedangDicetakLabel);
             this.sedangDicetakGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
             this.sedangDicetakGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
@@ -69,15 +73,54 @@
             this.sedangDicetakGroupBox.TabStop = false;
             this.sedangDicetakGroupBox.Text = "Sedang Dicetak";
             // 
+            // sudahDicetakLabel
+            // 
+            this.sudahDicetakLabel.AutoSize = true;
+            this.sudahDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
+            this.sudahDicetakLabel.Location = new System.Drawing.Point(10, 168);
+            this.sudahDicetakLabel.Name = "sudahDicetakLabel";
+            this.sudahDicetakLabel.Size = new System.Drawing.Size(199, 27);
+            this.sudahDicetakLabel.TabIndex = 12;
+            this.sudahDicetakLabel.Text = "Klik mulai mencetak.";
+            // 
+            // cetakButton
+            // 
+            this.cetakButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
+            this.cetakButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cetakButton.Enabled = false;
+            this.cetakButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.cetakButton.FlatAppearance.BorderSize = 0;
+            this.cetakButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cetakButton.Font = new System.Drawing.Font("Calibri", 11F);
+            this.cetakButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.cetakButton.Location = new System.Drawing.Point(11, 85);
+            this.cetakButton.Name = "cetakButton";
+            this.cetakButton.Size = new System.Drawing.Size(194, 30);
+            this.cetakButton.TabIndex = 8;
+            this.cetakButton.Text = "Cetak";
+            this.cetakButton.UseVisualStyleBackColor = false;
+            this.cetakButton.Click += new System.EventHandler(this.cetakButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(72)))), ((int)(((byte)(94)))));
+            this.label1.Location = new System.Drawing.Point(6, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 39);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Sudah Dicetak";
+            // 
             // sedangDicetakLabel
             // 
             this.sedangDicetakLabel.AutoSize = true;
             this.sedangDicetakLabel.Font = new System.Drawing.Font("Calibri", 11F);
             this.sedangDicetakLabel.Location = new System.Drawing.Point(6, 47);
             this.sedangDicetakLabel.Name = "sedangDicetakLabel";
-            this.sedangDicetakLabel.Size = new System.Drawing.Size(192, 27);
+            this.sedangDicetakLabel.Size = new System.Drawing.Size(199, 27);
             this.sedangDicetakLabel.TabIndex = 2;
-            this.sedangDicetakLabel.Text = "sedangDicetakLabel";
+            this.sedangDicetakLabel.Text = "Klik mulai mencetak.";
             // 
             // antrianEkspresGroupBox
             // 
@@ -146,6 +189,7 @@
             // 
             this.berhentiMencetakButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
             this.berhentiMencetakButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.berhentiMencetakButton.Enabled = false;
             this.berhentiMencetakButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.berhentiMencetakButton.FlatAppearance.BorderSize = 0;
             this.berhentiMencetakButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,13 +202,6 @@
             this.berhentiMencetakButton.Text = "Berhenti Mencetak";
             this.berhentiMencetakButton.UseVisualStyleBackColor = false;
             this.berhentiMencetakButton.Click += new System.EventHandler(this.berhentiMencetakButton_Click);
-            // 
-            // cetakProgressBar
-            // 
-            this.cetakProgressBar.Location = new System.Drawing.Point(11, 86);
-            this.cetakProgressBar.Name = "cetakProgressBar";
-            this.cetakProgressBar.Size = new System.Drawing.Size(290, 23);
-            this.cetakProgressBar.TabIndex = 3;
             // 
             // FormAntrian
             // 
@@ -199,6 +236,8 @@
         private System.Windows.Forms.Label sedangDicetakLabel;
         private System.Windows.Forms.Label antrianEkspresLabel;
         private System.Windows.Forms.Label antrianBiasaLabel;
-        private System.Windows.Forms.ProgressBar cetakProgressBar;
+        private System.Windows.Forms.Label sudahDicetakLabel;
+        private System.Windows.Forms.Button cetakButton;
+        private System.Windows.Forms.Label label1;
     }
 }
