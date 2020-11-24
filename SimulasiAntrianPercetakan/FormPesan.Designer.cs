@@ -100,6 +100,7 @@
             this.namaBerkasTextBox.Name = "namaBerkasTextBox";
             this.namaBerkasTextBox.Size = new System.Drawing.Size(303, 35);
             this.namaBerkasTextBox.TabIndex = 2;
+            this.namaBerkasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.namaBerkasTextBox_KeyPress);
             // 
             // label2
             // 
@@ -129,7 +130,7 @@
             this.ClientSize = new System.Drawing.Size(536, 193);
             this.Controls.Add(this.panel1);
             this.Name = "FormPesan";
-            this.Text = "Form Pesan";
+            this.Text = "Form Pesan (Pelanggan ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -21,6 +21,7 @@ namespace SimulasiAntrianPercetakan
             InitializeComponent();
             biasaRadioButton.Select();
             this.idPelanggan = idPelanggan;
+            Text += idPelanggan.ToString() + ")";
         }
 
         // Behaviour FormPesan
@@ -39,6 +40,14 @@ namespace SimulasiAntrianPercetakan
             // END DEBUGGING
             FormUtama.pelanggan[idPelanggan].Pesan(namaBerkasTextBox.Text, ekspresRadioButton.Checked);
             Close();
+        }
+        private void namaBerkasTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                pesanButton.PerformClick();
+            }
         }
     }
 }
