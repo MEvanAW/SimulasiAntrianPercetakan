@@ -19,11 +19,13 @@ namespace SimulasiAntrianPercetakan
         public FormAmbilPesanan(int idPelanggan)
         {
             InitializeComponent();
+            // Untuk mengenali pelanggan mana yang memesan
             this.idPelanggan = idPelanggan;
+            // Menampilkan nomor pelanggan pada judul form
             Text += idPelanggan.ToString() + ")";
+            // Menampilkan berkas siap ambil
             berkasSiapAmbilLabel.Text = "";
             int noBerkas = 1;
-            // Menampilkan berkas siap ambil
             foreach (Pesanan berkasTercetak in Percetakan.BerkasTercetak)
             {
                 if (berkasTercetak.idPelanggan == idPelanggan)

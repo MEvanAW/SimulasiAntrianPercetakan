@@ -8,13 +8,18 @@ namespace SimulasiAntrianPercetakan
 {
     class Pesanan
     {
-        // Atribut nota pesanan
+        // ATRIBUT PESANAN
         public int idPelanggan;
         public string namaBerkas;
         public bool isEkspres;
         public int timeStamp;
 
-        // Constructor Pesanan
+        /// <summary>
+        /// Konstruktor kelas Pesanan.
+        /// </summary>
+        /// <param name="idPelanggan">Nomor pelanggan yang memesan.</param>
+        /// <param name="namaBerkas">Nama berkas yang dipesan.</param>
+        /// <param name="isEkspres">Bernilai true jika pesanan ekspres, bernilai false jika pesanan biasa.</param>
         public Pesanan(int idPelanggan, string namaBerkas, bool isEkspres)
         {
             this.idPelanggan = idPelanggan;

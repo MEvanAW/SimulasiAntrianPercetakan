@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace SimulasiAntrianPercetakan
 {
+    // Kelas static karena hanya ada satu instance saja.
     static class Percetakan
     {
-        // Atribut percetakan
+        // ATRIBUT PERCETAKAN
         private static Queue<Pesanan> _antrianBiasa = new Queue<Pesanan>();
         private static Queue<Pesanan> _antrianEkspres = new Queue<Pesanan>();
         public static List<Pesanan> BerkasTercetak = new List<Pesanan>();
         private static int _jumlahPrinter = 1;
         private static int _jumlahPrinterOn = 1;
 
-        // Property percetakan
+        // PROPERTIES PERCETAKAN
         public static int JumlahPrinter{
             get {return _jumlahPrinter; }
             set {
@@ -25,9 +26,15 @@ namespace SimulasiAntrianPercetakan
                     // Maka dilakukan penyesuaian:
                     _jumlahPrinterOn = _jumlahPrinter; }
         }
+        /// <summary>
+        /// Antrian pesanan berjenis biasa.
+        /// </summary>
         public static List<Pesanan> AntrianBiasa {
             get { return _antrianBiasa.ToList(); }
         }
+        /// <summary>
+        /// Antrian pesanan berjenis ekspres.
+        /// </summary>
         public static List<Pesanan> AntrianEkspres
         {
             get { return _antrianEkspres.ToList(); }
@@ -42,7 +49,11 @@ namespace SimulasiAntrianPercetakan
                     _jumlahPrinterOn = _jumlahPrinter; }
         }
 
-        // Behaviour percetakan
+        // BEHAVIOUR PERCETAKAN
+        /// <summary>
+        /// Percetakan menerima pesanan dari pelanggan.
+        /// </summary>
+        /// <param name="pesanan">Detail terkait pesanan.</param>
         public static void TerimaPesanan(Pesanan pesanan)
         {
             if (!pesanan.isEkspres)
@@ -50,6 +61,10 @@ namespace SimulasiAntrianPercetakan
             else
                 _antrianEkspres.Enqueue(pesanan);
         }
+        /// <summary>
+        /// Percetakan mencetak pesanan dengan nomor urut paling awal. Pesanan ekspres selalu lebih awal dari pesanan biasa.
+        /// </summary>
+        /// <returns>Kembalian berupa pesanan yang dicetak.</returns>
         public static Pesanan Cetak()
         {
             if (_antrianEkspres.Any())
