@@ -47,6 +47,7 @@ namespace SimulasiAntrianPercetakan
             if (Percetakan.AntrianBiasa.Count == 0 && Percetakan.AntrianEkspres.Count == 0)
             {
                 cetakButton.Enabled = false;
+                berhentiMencetakButton.Enabled = false;
                 akanDicetakLabel.Text = "Semua berkas sudah dicetak.";
             }
             // Memperbarui sudahDicetakLabel.Text
